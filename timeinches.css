@@ -1,0 +1,236 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+}
+
+.Manhattan {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.manhattanOverlay {
+  fill: black;
+}
+
+#overlay {
+  opacity: 0.2;
+}
+
+.miniManhattan {
+  position: fixed;
+  width: 2rem;
+  top: 10px;
+  right: 10px;
+  opacity: 0.5;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.manhattanOutline {
+  fill: #ccc;
+  stroke: black;
+  stroke-width: 3;
+}
+
+.sticky-content {
+  top: 10px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.left-offset {
+  margin-left: 40vw;
+}
+
+section {
+  position: relative;
+  height: 100%;
+  z-index: 2;
+}
+
+#content {
+  padding-top: 5vh;
+  padding-bottom: 2.5vh;
+  font-family: 'Special Elite';
+}
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.demo {
+  height: 75px;
+  position: fixed;
+  bottom: 0px;
+}
+
+#scrollButton a {
+  padding-top: 60px;
+  margin-left: 50vw;
+}
+#scrollButton a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+#scrollButton a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+#dottedLine {
+    position: absolute;
+    border: none;
+    border-top: 1px dotted black;
+    margin-top: -8px;
+    border-width: 8px;
+    width: 100%;
+    opacity: 0.05;
+    top: 0px;
+    z-index: -1;
+}
+#timeInches {
+  position: absolute;
+  margin-left: 10vw;
+  top: 0px;
+}
+.number-style {
+  font-family: 'Special Elite';
+  color: black;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+#hiddenTimeInches {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  visibility: hidden;
+  z-index: 2;
+}
+
+img.Manhattan {
+  -webkit-filter: sepia(25%); /* Safari 6.0 - 9.0 */
+  filter: sepia(25%);
+}
+
+#jLouisIV {
+  position: fixed;
+  height: 2rem;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#deathImg {
+  vertical-align: top;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  opacity: 0.3;
+  z-index: 1;
+  width: 100vw;
+  height: auto;
+  pointer-events: none;
+}
+
+#deathText {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 3rem;
+  color: white;
+  opacity: 0.9;
+  font-family: 'Special Elite';
+}
+
+#deathOverlay {
+  visibility: hidden;
+}
